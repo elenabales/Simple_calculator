@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculator Elena's App</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <form name="calc">
+          <input type="text" name="text" readonly id="screen" />
+        </form>
+      </div>
+      <div class="cal-body">
+        <div class="btn">
+          <button class="num" onclick="document.calc.text.value+='7'">7</button>
+          <button class="num" onclick="document.calc.text.value+='8'">8</button>
+          <button class="num" onclick="document.calc.text.value+='9'">9</button>
+          <button class="del" onclick="del()">DEL</button>
+          <button class="num" onclick="document.calc.text.value+='4'">4</button>
+          <button class="num" onclick="document.calc.text.value+='5'">5</button>
+          <button class="num" onclick="document.calc.text.value+='6'">6</button>
+          <button onclick="document.calc.text.value+='+'">+</button>
+          <button class="num" onclick="document.calc.text.value+='1'">1</button>
+          <button class="num" onclick="document.calc.text.value+='2'">2</button>
+          <button class="num" onclick="document.calc.text.value+='3'">3</button>
+          <button onclick="document.calc.text.value+='-'">-</button>
+          <button onclick="document.calc.text.value+='.'">.</button>
+          <button class="num" onclick="document.calc.text.value+='0'">0</button>
+          <button onclick="document.calc.text.value+='/'">/</button>
+          <button onclick="document.calc.text.value+='*'">X</button>
+          <button class="reset" onclick="document.calc.text.value=''">C</button>
+          <button class="set" onclick="document.calc.text.value=''">CE</button>
+          <button
+            class="equal"
+            onclick="document.calc.text.value= eval(calc.text.value)"
+          >
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
